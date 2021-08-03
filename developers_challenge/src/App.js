@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import GithubCont from './components/GithubCont';
+import HorizonLine from './components/HorizonLine';
+import ChallengeList from './components/ChallengeList';
+import {challenges} from './Challenges';
+import ImgMedia from './components/Challenge';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <GithubCont/>
+      <HorizonLine text='참여 중인 챌린지'/>
+      <ChallengeList challenges={challenges}/>
+      
     </div>
   );
 }
